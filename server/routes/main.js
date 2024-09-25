@@ -11,6 +11,8 @@ const locals = {
 }
 try {
     const data = await Post.find();
+    //const obj = JSON.parse(data);
+    console.log(data);
     res.render('index', { locals,data });
 } catch (error) {
     console.log(error);
@@ -73,7 +75,11 @@ try {
 
 
 router.get('/about', (req,res) =>{
-    res.render('about');
+    res.render('about',{title:'About Our Contents'});
+})
+
+router.get('/contact', (req,res) =>{
+    res.render('contact',{title:'Contact Us'});
 })
 // router.get('', (req, res) =>{
 // res.send('Hello world');

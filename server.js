@@ -22,7 +22,7 @@ app.set('layout','./layouts/main')
 app.set('view engine', 'ejs');
 
 app.use('/', require('./server/routes/main'))
-app.use('/next', require('./server/routes/main2'))
+//app.use('/next', require('./server/routes/main2'))
 
 // app.get('/', (req,res) => {
 //     res.render('index')
